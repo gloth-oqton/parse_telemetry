@@ -7,7 +7,7 @@ import telemetry_util
 
 def main():
 	path_csv = sys.argv[1]
-	items = telemetry_util.read()
+	items = telemetry_util.read(path_csv)
 	# do things here
 	return
 

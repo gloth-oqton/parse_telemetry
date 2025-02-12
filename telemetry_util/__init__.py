@@ -134,17 +134,5 @@ def read(path: str):
 	columns, rows = _parse_csv(path)
 	Item = collections.namedtuple("Item", columns)
 	items = [ Item (*row) for row in rows ]
-
-"""
-	# for figuring out types of columns
-	row_complete = rows[0]
-	n = len(columns)
-	for row in rows:
-		for i in range(n):
-			if row_complete[i] == None and row[i] != None:
-				row_complete[i] = row[i]
-	item_complete = Item(*row_complete)
-"""
-
 	return items
 
